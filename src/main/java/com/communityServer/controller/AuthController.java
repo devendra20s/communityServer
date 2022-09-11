@@ -1,7 +1,7 @@
 package com.communityServer.controller;
 
 import com.communityServer.dto.*;
-import com.communityServer.model.UserModel;
+import com.communityServer.model.User;
 import com.communityServer.repository.UserRepository;
 import com.communityServer.service.CustomUserDetailsService;
 import com.communityServer.util.JwtUtil;
@@ -15,11 +15,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
-import java.net.URI;
-import java.util.Collections;
 
 @RestController
 public class AuthController {
@@ -86,7 +83,7 @@ public class AuthController {
 		}
 
 		// Creating user's account
-		UserModel user = new UserModel();
+		User user = new User();
 		user.setEmail(signUpRequest.getEmail());
 		user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
 		userRepository.save(user);

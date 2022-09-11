@@ -1,14 +1,14 @@
 package com.communityServer.repository;
 
-import com.communityServer.model.UserModel;
+import com.communityServer.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface UserRepository extends JpaRepository<UserModel,Integer> {
-    List<UserModel> findAll();
+public interface UserRepository extends JpaRepository<User,Integer> {
+    List<User> findAll();
 
-    UserModel findByEmail(String email);
+    User findByEmail(String email);
 
-    UserModel findUserByEmail(String email);
+    User findUserByEmail(String email);
 }
