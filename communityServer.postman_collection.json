@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "a86e85c4-47ed-4c85-9c6f-b33cc17bcb01",
+		"name": "TechmentCommunity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Singup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"123456789\",\n    \"email\":\"devendrasahu7000@gmail.com\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/signup",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"usernameOrEmail\":\"devendrasahu7000@gmail.com\",\n    \"password\":\"123456789\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/signin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBlog",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":2,\n    \"title\":\"test title \",\n    \"content\":\"hey this devendra with new blog\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/getAllBlog",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"getAllBlog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBlog",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbmRyYXNhaHU3MDAwQGdtYWlsLmNvbSIsImV4cCI6MTY2Mjc3MTM5MywiaWF0IjoxNjYyNzM1MzkzfQ.ZH4tXFtC6NNkqS7XvKoEwgCI3ppv6u4dTbTv0m4iw5E",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/blog",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddBlog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbmRyYXNhaHU3MDAwQGdtYWlsLmNvbSIsImV4cCI6MTY2Mjc3MTM5MywiaWF0IjoxNjYyNzM1MzkzfQ.ZH4tXFtC6NNkqS7XvKoEwgCI3ppv6u4dTbTv0m4iw5E",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":2,\n    \"title\":\"test title \",\n    \"content\":\"hey this devendra with new blog\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}addBlog",
+					"host": [
+						"{{base_url}}addBlog"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
